@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production builds
+dist/
+build/
+out/
+.next/
+
+# Development
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Replit specific
+.replit
+.replitignore
+.agents/
+.cache/
+.config/
+.npm/
+.npm-global/
+
+# OS
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Misc
+*.zip
+attached_assets/
+mockup-sandbox/

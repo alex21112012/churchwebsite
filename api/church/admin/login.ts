@@ -1,0 +1,1 @@
+export { default } from "../../../lib/church-api/admin/login";

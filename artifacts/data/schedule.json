@@ -1,0 +1,14 @@
+{
+  "monthEn": "Every Sunday",
+  "monthSr": "Сваке Недеље",
+  "services": [
+    {
+      "day": "Every Sunday",
+      "dowEn": "Sunday",
+      "dowSr": "Недеља",
+      "time": "10:00 AM",
+      "titleEn": "Divine Liturgy",
+      "titleSr": "Света Литургија"
+    }
+  ]
+}

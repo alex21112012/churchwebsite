@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "installCommand": "pnpm install",
+  "buildCommand": "NODE_ENV=production BASE_PATH=/ pnpm --filter @workspace/church-website run build",
+  "outputDirectory": "artifacts/church-website/dist/public",
+  "functions": {
+    "api/church/organizations/[id].ts": {
+      "includeFiles": "lib/church-api/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
