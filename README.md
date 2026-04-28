@@ -193,27 +193,7 @@ This is a personal project, but if you want to improve it:
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
 
-MIT License - Feel free to use this as a template for your own church website!
-
-## 🙏 Acknowledgments
-
-Built with love for St. Archangel Michael Serbian Orthodox Church in Salt Lake City, Utah.
-
-Special thanks to:
-- Father Nemanja Plavšić (the birthday boy!)
-- The Serbian Orthodox community in SLC
-- Seneca College CPA program
-
-## 📞 Support
-
-For questions or issues:
-- Check the `replit.md` file for detailed technical documentation
-- Review the code comments
-- Consult Supabase and Vercel documentation
-
----
 
 **Built with ❤️ by a student who wanted to give his brother the best birthday gift ever.**
 
