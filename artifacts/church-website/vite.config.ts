@@ -6,26 +6,16 @@ import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 const isProduction = process.env.NODE_ENV === "production";
 
-const rawPort = process.env.PORT;
-if (!rawPort && !isProduction) {
-  throw new Error("PORT environment variable is required but was not provided.");
-}
-const port = Number(rawPort || 3000);
-if (!isProduction && (Number.isNaN(port) || port <= 0)) {
-  throw new Error(`Invalid PORT value: "${rawPort}"`);
-}
-
-const basePath = process.env.BASE_PATH ?? "/";
-if (!isProduction && !process.env.BASE_PATH) {
-  throw new Error("BASE_PATH environment variable is required but was not provided.");
-}
+const rawPort = process.env.PORT || "3000";
+const port = Number(rawPort);
+const basePath = process.env.BASE_PATH || "/";
 
 export default defineConfig({
   base: basePath,
   plugins: [
     react(),
     tailwindcss(),
-    runtimeErrorOverlay(),
+    !isProduction && runtimeErrorOverlay(),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [
@@ -39,11 +29,11 @@ export default defineConfig({
           ),
         ]
       : []),
-  ],
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
-      "@assets": path.resolve(import.meta.dirname, "..", "..", "attached_assets"),
+      "@assets": path.resolve(import.meta.dirname, "public", "images"),
     },
     dedupe: ["react", "react-dom"],
   },
@@ -56,7 +46,6 @@ export default defineConfig({
     port,
     strictPort: true,
     host: "0.0.0.0",
-    allowedHosts: true,
     fs: {
       strict: true,
     },
@@ -64,6 +53,5 @@ export default defineConfig({
   preview: {
     port,
     host: "0.0.0.0",
-    allowedHosts: true,
   },
 });

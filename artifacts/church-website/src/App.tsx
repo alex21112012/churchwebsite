@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { scheduleData as staticSchedule } from "./data/schedule";
-import michaelMosaic from "@assets/image_1776786073638.png";
-import michaelBW from "@assets/image_1776786172781.png";
+import michaelMosaic from "/images/image_1776786073638.png";
+import michaelBW from "/images/image_1776786172781.png";
 import EventsSection from "./EventsSection";
 import OrganizationsSection from "./OrganizationsSection";
 import DonationsSection from "./DonationsSection";
